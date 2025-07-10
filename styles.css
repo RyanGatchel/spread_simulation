@@ -1,0 +1,47 @@
+body {
+  font-family: sans-serif;
+  text-align: center;
+  background: #f2f2f2;
+  margin: 20px;
+}
+
+#grid {
+  display: grid;
+  grid-template-columns: repeat(10, 30px);
+  gap: 5px;
+  justify-content: center;
+  margin: 20px auto;
+}
+
+.dot {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  display: inline-block;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.immune { background-color: #2ecc71; }
+.partial { background-color: #7ddc9f; }
+.not-immune { background-color: orange; }
+.infected { background-color: #e74c3c; }
+.hospitalized { background-color: #3498db; }
+.dead { background-color: #555; }
+
+.flash {
+  animation: flash 0.4s ease-out;
+}
+@keyframes flash {
+  from { background-color: yellow; }
+  to   { background-color: #e74c3c; }
+}
+
+#legend {
+  margin: 15px;
+  font-size: 14px;
+}
+
+.empty {
+  visibility: hidden;
+}

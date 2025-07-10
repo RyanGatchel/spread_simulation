@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Measles Simulation Grid</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <h1>🧪 Measles Spread Simulation</h1>
+
+  <div id="legend">
+    <span class="dot immune"></span> 2-dose immune (97%) &nbsp;
+    <span class="dot partial"></span> 1-dose (93%) &nbsp;
+    <span class="dot not-immune"></span> Not vaccinated (90% risk) &nbsp;
+    <span class="dot infected"></span> Infected &nbsp;
+    <span class="dot hospitalized"></span> Hospitalized &nbsp;
+    <span class="dot dead"></span> Deceased
+  </div>
+
+  <label>💉 Scenario:
+    <select id="scenario" onchange="resetGrid()">
+      <option value=".95">95% vaccinated</option>
+      <option value="0.9">90% vaccinated</option>
+      <option value="0.8">80% vaccinated</option>
+      <option value="0.7">70% vaccinated</option>
+      <option value="0.6">60% vaccinated</option>
+      <option value="0.5">50% vaccinated</option>
+      <option value="0.4">40% vaccinated</option>
+      <option value="0.3">30% vaccinated</option>
+      <option value="0.2">20% vaccinated</option>
+      <option value="0.1">10% vaccinated</option>
+      <option value="0.0">0% vaccinated</option>
+    </select>
+  </label>
+
+  <div id="stats"></div>
+  <button onclick="nextStep()">▶️ Next Step</button>
+  <button onclick="resetGrid()">🔄 Reset</button>
+
+  <div id="grid"></div>
+
+  <script src="game.js"></script>
+</body>
+</html>
